@@ -1,0 +1,159 @@
+body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: linear-gradient(135deg, #87CEEB, #98FB98);
+            font-family: Arial, sans-serif;
+        }
+
+        #gameContainer {
+            text-align: center;
+            background: white;
+            border-radius: 15px;
+            padding: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
+
+        canvas {
+            border: 3px solid #333;
+            border-radius: 10px;
+            background: linear-gradient(to bottom, #87CEEB 0%, #98FB98 100%);
+        }
+
+        #gameInfo {
+            display: flex;
+            justify-content: space-between;
+            margin: 10px 0;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        #score {
+            color: #333;
+        }
+
+        #powerInfo {
+            color: #9932CC;
+        }
+
+        #instructions {
+            margin: 10px 0;
+            color: #666;
+            font-size: 14px;
+        }
+
+        #gameOver, #birdSelection {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: rgba(0,0,0,0.9);
+            color: white;
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+            display: none;
+            z-index: 100;
+            max-width: 600px;
+        }
+
+        #birdSelection {
+            display: block;
+        }
+
+        .bird-option {
+            display: inline-block;
+            margin: 10px;
+            padding: 15px;
+            border: 3px solid transparent;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            background: rgba(255,255,255,0.1);
+        }
+
+        .bird-option:hover {
+            border-color: #FFD700;
+            background: rgba(255,215,0,0.2);
+        }
+
+        .bird-option.selected {
+            border-color: #32CD32;
+            background: rgba(50,205,50,0.2);
+        }
+
+        .bird-preview {
+            width: 60px;
+            height: 60px;
+            image-rendering: pixelated;
+        }
+
+        .bird-stats {
+            font-size: 12px;
+            margin: 5px 0;
+            color: #FFD700;
+        }
+
+        .bird-power {
+            font-size: 11px;
+            color: #FF69B4;
+            font-weight: bold;
+        }
+
+        button {
+            background: #32CD32;
+            border: none;
+            color: white;
+            padding: 12px 24px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+            margin: 10px;
+            transition: background 0.3s ease;
+        }
+
+        button:hover {
+            background: #228B22;
+        }
+
+        #loadingScreen {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: rgba(0,0,0,0.8);
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            z-index: 200;
+        }
+
+        .power-active {
+            animation: powerGlow 0.5s infinite alternate;
+        }
+
+        @keyframes powerGlow {
+            from { text-shadow: 0 0 5px #9932CC; }
+            to { text-shadow: 0 0 15px #FF69B4; }
+        }
+
+        .cooldown-bar {
+            width: 100px;
+            height: 4px;
+            background: #333;
+            border-radius: 2px;
+            margin: 2px auto;
+            overflow: hidden;
+        }
+
+        .cooldown-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #FF69B4, #9932CC);
+            width: 100%;
+            transition: width 0.1s linear;
+        }
+ 
