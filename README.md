@@ -1,6 +1,9 @@
 # flappybird
 Classic flappy birds in js
 
+Play here 👉 [Flappy Bird on GitHub Pages](https://parvepalial.github.io/flappybird/)
+
+
 <img width="643" height="725" alt="image" src="https://github.com/user-attachments/assets/5f0e7dbe-ab0d-4735-a11b-5bbfd7723c5b" />
 
 
